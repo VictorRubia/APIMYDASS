@@ -91,6 +91,8 @@ La clave es una cadena muy sensible ya que si se tiene acceso a ella, se pueden 
 
 ## Pruebas
 
+> Pruebas pendientes de realizar
+
 [//]: # (TODO: Añadir pruebas)
 
 ## Endpoints
