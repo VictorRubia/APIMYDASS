@@ -8,7 +8,7 @@ Se ha utilizado la versión Alpine de Ruby para reducir el tamaño del contenedo
 
 ## Instalación
 
-Tener instalado Docker y Docker-Compose en el equipo.
+Tener instalado Docker y Docker-Compose en el equipo. Crear el archivo `master.key` dentro de `config/` con la clave de encriptación de las credenciales (solicitarla).
 
 Realizar sobre la carpeta del proyecto:
 
