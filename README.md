@@ -100,3 +100,9 @@ La clave es una cadena muy sensible ya que si se tiene acceso a ella, se pueden 
 Puedes consultar los endpoints y sus detalles consultando [su documentación](/docs/api_endpoints.md) o, si lo prefiere, puede visualizarlos de forma interactiva en la documentación de Postman, donde podrá probar las peticiones a la API y obtener código autogenerado para solicitar los datos en su lenguaje de programación favorito.
 
 [![Ejecutar en Postman](https://run.pstmn.io/button.svg)](https://documenter.getpostman.com/view/15069603/2s93CGQvX9)
+
+## Leyenda de IDs
+
+Los IDs de los sensores y dispositivos se han generado de forma aleatoria, por lo que no tienen ningún significado. La única excepción es el ID de los usuarios `XXX-000`, que se ha utilizado para representar a un sujeto de estudio según la localización. Hasta ahora, se tiene 'MR-000' para representar a un sujeto de estudio en el centro de Maracena y 'CHA-000' para representar a un sujeto de estudio en el centro de la Chana.
+
+El significado y la equivalencia de los IDs de los sensores y dispositivos puede leerla [aquí](/docs/leyenda_ids.md).
