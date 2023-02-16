@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  device_type: 1
+  sensor_type: 1
+  values_x: 1.5
+  values_y: 1.5
+  values_z: 1.5
+  timestamp: 
+  user: MyString
+
+two:
+  device_type: 1
+  sensor_type: 1
+  values_x: 1.5
+  values_y: 1.5
+  values_z: 1.5
+  timestamp: 
+  user: MyString

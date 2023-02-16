@@ -1,0 +1,1 @@
+json.array! @sensors, partial: "api/v1/sensors/sensor", as: :sensor
