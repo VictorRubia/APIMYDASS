@@ -32,7 +32,7 @@ Los cuales son totalmente modificables y configurables.
 
 ## Modelo de datos
 
-![modeloDatos](docs/img/sensor_model.png)
+![modeloDatos|250](docs/img/sensor_model.png)
 
 El modelo de datos en la versión 1.0 de la API es el siguiente:
 
