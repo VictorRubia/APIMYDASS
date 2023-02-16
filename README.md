@@ -95,4 +95,6 @@ La clave es una cadena muy sensible ya que si se tiene acceso a ella, se pueden 
 
 ## Endpoints
 
-[//]: # (TODO: Añadir endpoints)
+Puedes consultar los endpoints y sus detalles consultando [su documentación](/docs/api_endpoints.md) o, si lo prefiere, puede visualizarlos de forma interactiva en la documentación de Postman, donde podrá probar las peticiones a la API y obtener código autogenerado para solicitar los datos en su lenguaje de programación favorito.
+
+[![Ejecutar en Postman](https://run.pstmn.io/button.svg)](https://documenter.getpostman.com/view/15069603/2s93CGQvX9)

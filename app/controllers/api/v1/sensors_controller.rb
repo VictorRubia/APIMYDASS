@@ -3,7 +3,13 @@ class Api::V1::SensorsController < Api::V1::BaseController
 
   # GET /sensors
   def index
-    @sensors = Sensor.all
+    if params.has_key?(:timestamp_ini) && params.has_key?(:timestamp_end)
+      @sensors = Sensor.where("timestamp >= ? AND timestamp <= ?", params[:timestamp_ini], params[:timestamp_end])
+    elsif params.has_key?(:timestamp_ini)
+      @sensors = Sensor.where("timestamp >= ?", params[:timestamp_ini], params[:timestamp_end])
+    else
+      @sensors = Sensor.all
+    end
     render json: @sensors
   end
 
