@@ -55,6 +55,10 @@ Rails.application.configure do
 
   config.log_level = :debug
 
+  config.hosts << "mydass.ugr.es"
+
+  config.relative_url_root = "/ahmed"
+
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
 
