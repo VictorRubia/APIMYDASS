@@ -31,6 +31,12 @@ services:
     command: sh -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     container_name: exp_mydass
     restart: always
+    environment:
+      - PROD_DATABASE_USR=${PROD_DATABASE_USR}
+      - PROD_DATABASE_PWD=${PROD_DATABASE_PWD}
+      - PROD_DATABASE_URL=${PROD_DATABASE_URL}
+      - PROD_DATABASE_PORT=${PROD_DATABASE_PORT}
+      - RAILS_MASTER_KEY=${RAILS_MASTER_KEY}
     volumes:
       - .:/exp
     ports:
