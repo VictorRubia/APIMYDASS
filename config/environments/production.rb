@@ -54,6 +54,10 @@ Rails.application.configure do
   config.active_record.verbose_query_logs = true
 
   config.log_level = :debug
+  logger           = ActiveSupport::Logger.new(STDOUT)
+  logger.formatter = config.log_formatter
+  config.logger    = ActiveSupport::TaggedLogging.new(logger)
+
 
   config.hosts << "mydass.ugr.es"
   config.hosts << "localhost"
