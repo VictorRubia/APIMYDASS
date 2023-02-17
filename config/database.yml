@@ -47,4 +47,4 @@ production:
   password: <%= ENV["PROD_DATABASE_PWD"] %>
   host: <%= ENV["PROD_DATABASE_URL"] %>
   port: <%= ENV["PROD_DATABASE_PORT"] %>
-  database: ahmed_test
+  database: ahmed
