@@ -56,6 +56,7 @@ Rails.application.configure do
   config.log_level = :debug
 
   config.hosts << "mydass.ugr.es"
+  config.hosts << "localhost"
 
   config.relative_url_root = "/ahmed"
 

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: "rails/welcome#index"
   namespace :api do
     namespace :v1 do
       defaults format: :json do
