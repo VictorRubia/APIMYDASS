@@ -1,6 +1,24 @@
 class Api::V1::SensorsController < Api::V1::BaseController
   before_action :set_sensor, only: %i[ show ]
 
+  def export_bydevicesensor
+    @sensors = Sensor.where(device_type: params[:device_type], sensor_type: params[:sensor_type], user_id: params[:user_id])
+    if params.has_key?(:timestamp_ini) && params.has_key?(:timestamp_end)
+      @sensors = Sensor.where("timestamp >= ? AND timestamp <= ? AND user_id = ? AND device_type = ? AND sensor_type = ?", params[:timestamp_ini], params[:timestamp_end], params[:user_id], params[:device_type], params[:sensor_type])
+    elsif params.has_key?(:timestamp_ini)
+      @sensors = Sensor.where("timestamp >= ? AND user_id = ? AND device_type = ? AND sensor_type = ?", params[:timestamp_ini], params[:user_id], params[:device_type], params[:sensor_type])
+    else
+      @sensors = Sensor.where(device_type: params[:device_type], sensor_type: params[:sensor_type], user_id: params[:user_id])
+    end
+    respond_to do |format|
+      format.csv do
+        response.headers['Content-Type'] = 'text/csv'
+        response.headers['Content-Disposition'] = "attachment; filename=export_" + params[:user_id] + "_" + params[:sensor_type] + ".csv"
+        render template: "api/v1/sensors/export_bydevicesensor"
+      end
+    end
+  end
+
   # GET /sensors
   def index
     if params.has_key?(:timestamp_ini) && params.has_key?(:timestamp_end)

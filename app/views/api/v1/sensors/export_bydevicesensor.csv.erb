@@ -1,0 +1,11 @@
+<% require 'json' %>
+<%- headers = ['eje_x', 'eje_y','eje_z','timestamp'] -%>
+<%= CSV.generate_line headers %>
+<%- @sensors.each do |sensor| %>
+<%= CSV.generate_line([
+sensor[:values_x],
+ sensor[:values_y],
+  sensor[:values_z],
+    sensor[:timestamp],
+      ]) -%>
+<%- end %>
